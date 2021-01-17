@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<h1 class="category">People</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Gender</th>
+        <th>Birth Year</th>
+        <th>Hair Color</th>
+        <th>Mass</th>
+    </tr>
+
+    <% msg.results.forEach((people) => { %>
+        <tr>
+            <td> <%= people.name %> </td>
+            <td> <%= people.height %> </td>
+            <td> <%= people.gender %> </td>
+            <td> <%= people.birth_year %> </td>
+            <td> <%= people.hair_color %> </td>
+            <td> <%= people.mass %> </td>
+        </tr>
+    <% }) %>
+</table>

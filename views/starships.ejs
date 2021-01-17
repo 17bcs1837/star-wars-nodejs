@@ -1,0 +1,27 @@
+<%- include('header') -%>
+<h1 class="category">Startships</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Speed</th>
+        <th>Crew</th>
+        <th>Consumables</th>
+        <th>Cargo Capacity</th>
+        <th>Class</th>
+        <th>Cost In Credits</th>
+    </tr>
+
+    <% msg.results.forEach((ship) => { %>
+        <tr>
+            <td> <%= ship.name %> </td>
+            <td> <%= ship.length %> </td>
+            <td> <%= ship.max_atmosphering_speed %> </td>
+            <td> <%= ship.crew %> </td>
+            <td> <%= ship.consumables %> </td>
+            <td> <%= ship.cargo_capacity %> </td>
+            <td> <%= ship.starship_class %> </td>
+            <td> <%= ship.cost_in_credits %> </td>
+        </tr>
+    <% }) %>
+</table>
